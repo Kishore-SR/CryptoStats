@@ -1,0 +1,57 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10%;
+  gap: 20px;
+  border-bottom: 2px solid rgb(78, 78, 78);
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo span {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.08rem;
+}
+
+.navbar img {
+  width: 50px;
+}
+
+.navbar select {
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar option {
+  background-color: #09005c;
+  color: white;
+}
+
+/* Media Queries for Mobile Screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 8px 4%;
+    gap: 15px;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .navbar select {
+    align-self: center;
+    width: 100%;
+    max-width: 300px;
+  }
+}
