@@ -5,8 +5,9 @@ import {CoinContext} from '../../context/CoinContext';
 import { useContext } from 'react';
 
 export const NavBar = () => {
+    const {setCurrency} = useContext(CoinContext);
 
-    const currentHandler = (event) => {
+    const currencyHandler = (event) => {
         switch (event.target.value) {
             case 'usd': {
                 setCurrency({ name: 'usd', symbol: '$' });
@@ -34,7 +35,7 @@ export const NavBar = () => {
             <span>CryptoStats</span>
         </div>
         <div className="nav-right">
-            <select onChange={currentHandler}>
+            <select onChange={currencyHandler}>
                 <option value="usd">USD</option>
                 <option value="eur">EUR</option>
                 <option value="inr">INR</option>
