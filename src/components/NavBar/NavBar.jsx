@@ -6,13 +6,27 @@ import { useContext } from 'react';
 
 export const NavBar = () => {
 
-    const {setCurrency} = useContext(CoinContext);
-    const currentHandler = (event) =>{
-        setCurrency({
-            name:event.target.value,
-            symbol:event.target.value === 'usd' ? '$' : event.target.value === 'eur' ? '€' : '₹'
-        })
-    }
+    const currentHandler = (event) => {
+        switch (event.target.value) {
+            case 'usd': {
+                setCurrency({ name: 'usd', symbol: '$' });
+                break;
+            }
+            case 'eur': {
+                setCurrency({ name: 'eur', symbol: '€' });
+                break;
+            }
+            case 'inr': {
+                setCurrency({ name: 'inr', symbol: '₹' });
+                break;
+            }
+            default: {
+                setCurrency({ name: 'usd', symbol: '$' });
+                break;
+            }
+        } 
+    };
+    
   return (
     <nav className='navbar'>
         <div className="logo">

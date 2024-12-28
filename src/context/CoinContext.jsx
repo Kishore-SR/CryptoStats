@@ -3,15 +3,15 @@ import { createContext, useEffect, useState } from "react";
 export const CoinContext = createContext();
 
 const CoinContextProvider = ( props ) => {
-  const [allCoins, setAllCoins] = useState([]);
+  const [allCoin, setAllCoin] = useState([]);
   const [currency, setCurrency] = useState({ name: "usd", symbol: "$" });
 
-  const fetchAllCoins = async () => {
+  const fetchAllCoin = async () => {
     const options = {
       method: "GET",
       headers: {
         accept: "application/json",
-        "x-cg-demo-api-key": process.env.CRYPTO_API_KEY,
+        "x-cg-demo-api-key": import.meta.env.VITE_API_URL,
       },
     };
 
@@ -20,14 +20,14 @@ const CoinContextProvider = ( props ) => {
       options
     )
       .then((response) => response.json())
-      .then((response) => setAllCoins(response))
+      .then((response) => setAllCoin(response))
       .catch((err) => console.error(err));
   };
 
-  useEffect(() => {fetchAllCoins()}, [currency]);
+  useEffect(() => {fetchAllCoin();}, [currency]);
 
   const contextValue = {
-    allCoins,
+    allCoin,
     currency,
     setCurrency,
   };
