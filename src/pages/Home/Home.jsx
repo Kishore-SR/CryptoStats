@@ -11,11 +11,6 @@ export const Home = () => {
     setDisplayCount((prevCount) => prevCount + 5);
   };
 
-  const handleSearchSubmit = (event) => {
-    event.preventDefault();
-    
-  };
-
   return (
     <div className="home">
       <div className="hero">
@@ -28,7 +23,7 @@ export const Home = () => {
           Bitcoin, altcoins, and other cryptocurrencies.
         </p>
 
-        <form onSubmit={handleSearchSubmit}>
+        <form>
           <input type="text" placeholder="Search crypto here..." />
           <button type="submit">Search</button>
         </form>
@@ -39,26 +34,24 @@ export const Home = () => {
           <p>#</p>
           <p>Coins</p>
           <p>Price</p>
-          <p className="text-center">24H Change</p>
+          <p style={{ textAlign: "center" }}>24H Change</p>
           <p className="market-cap">Market Cap</p>
         </div>
 
-        {allCoin?.slice(0, displayCount).map((item) => (
-          <div className="table-layout" key={item.id}>
+        {allCoin?.slice(0, displayCount).map((item, index) => (
+          <div className="table-layout" key={index}>
             <p>{item.market_cap_rank}</p>
             <div>
-              <img src={item.image} alt={`${item.name} logo`} />
-              <p>{`${item.name} - ${item.symbol}`}</p>
+              <img src={item.image} alt="coin" />
+              <p>{item.name + " - " + item.symbol}</p>
             </div>
             <p>
               {currency.symbol} {item.current_price.toLocaleString()}
             </p>
             <p
-              className={`price-change ${
-                item.price_change_percentage_24h > 0 ? "green" : "red"
-              }`}
+              className={item.price_change_percentage_24h > 0 ? "price-change green" : "price-change red"}
             >
-              {Math.floor(item.price_change_percentage_24h * 100) / 100}
+              {Math.floor(item.price_change_percentage_24h * 100) / 100}{" "}
               {item.price_change_percentage_24h > 0 ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
