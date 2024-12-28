@@ -30,10 +30,12 @@ export const NavBar = () => {
     
   return (
     <nav className='navbar'>
+      <a href="#">
         <div className="logo">
-            <img src={logo} alt="logo" />
-            <span>CryptoStats</span>
+          <img src={logo} alt="logo" />
+          <span>CryptoStats</span>
         </div>
+      </a>
         <div className="nav-right">
             <select onChange={currencyHandler}>
                 <option value="usd">USD</option>

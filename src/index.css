@@ -5,12 +5,16 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Nunito", serif;
+    scroll-behavior: smooth;
 }
 a{
     text-decoration: none;
 }
-.app{
+body{
     background: linear-gradient(to bottom, #27027c, #4a006d, #640c8d);
+
+}
+.app{
     min-height: 100vh;
     color: white;
 }
