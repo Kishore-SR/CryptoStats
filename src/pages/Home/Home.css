@@ -23,15 +23,19 @@
 }
 .hero form{
     padding: 8px;
-    width: 80%;
+    width: 60%;
     background-color: white;
     border-radius: 5px;
     font-size: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 4px;
     box-shadow: 2px 2px 8px rgb(43, 42, 42);
+}
+.hero form svg{
+    color: rgb(161, 158, 158);
+    width: 1.2rem;
 }
 .hero input{
     flex: 1;
@@ -41,7 +45,7 @@
     padding-left: 10px;
 }
 .hero input::placeholder{
-    color: rgb(190, 190, 190);
+    color: rgb(161, 158, 158);
 }
 .hero button{
     padding: 6px 24px;
@@ -147,6 +151,9 @@
     .price-change{
         gap: 0px;
     }
+    .hero form{
+        width: 80%;
+    }
     .hero input::placeholder{
         font-size: 0.9rem;
     }
@@ -168,3 +175,16 @@
         width: 100px;
     }
 }
+
+.error-message {
+    color: rgb(255, 154, 154);
+    font-size: 1rem;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .error-message svg{
+    width: 1.2rem;
+  }
