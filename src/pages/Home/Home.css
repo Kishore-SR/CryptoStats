@@ -14,6 +14,7 @@
 }
 .hero h1{
     font-size: max(4vw, 36px);
+    text-shadow: 1px 1px 8px rgb(51, 51, 51);
 }
 .hero p{
     width: 75%;
@@ -38,6 +39,9 @@
     outline: none;
     border: none;
     padding-left: 10px;
+}
+.hero input::placeholder{
+    color: rgb(190, 190, 190);
 }
 .hero button{
     padding: 6px 24px;
@@ -92,6 +96,7 @@
     align-items: center;
     justify-content: center;
     gap: 4px;
+    font-weight: 800;
 }
 .table-layout .green{
     color: #00D515;
@@ -124,12 +129,29 @@
   
 /* Responsiveness for Mobile */
 @media screen and (max-width: 768px){
+    .hero h1{
+        font-size: 28px;
+    }
+    .hero p{
+        width: 90%;
+        font-size: 0.8rem;
+        line-height: 1.2;
+    }
     .table-layout{
-        /* grid-template-columns: 0.5fr 3fr 1fr 1fr; */
-        grid-template-columns: 0.6fr 2.5fr 1.3fr 1fr;
+        grid-template-columns: 0.46fr 2.5fr 1.3fr 1fr;
+        padding: 15px 14px; 
     }
     .market-cap{
         display: none;
+    }
+    .price-change{
+        gap: 0px;
+    }
+    .hero input::placeholder{
+        font-size: 0.9rem;
+    }
+    .table-layout p{
+        user-select: none;
     }
 }
 @media screen and (max-width: 500px){
@@ -138,5 +160,11 @@
     }
     .table-layout{
         font-size: 0.76rem;
+    }
+    .table-layout .price{
+        font-size: 0.7rem;
+    }
+    .hero form input{
+        width: 100px;
     }
 }

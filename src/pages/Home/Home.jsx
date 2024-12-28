@@ -45,7 +45,7 @@ export const Home = () => {
               <img src={item.image} alt="coin" />
               <p>{item.name }</p>
             </div>
-            <p>
+            <p className="price">
               {currency.symbol} {item.current_price.toLocaleString()}
             </p>
             <p
