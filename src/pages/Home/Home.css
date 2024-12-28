@@ -99,3 +99,24 @@
     color: #ff4646;
     text-align: center;
 }
+
+.view-more-container {
+    text-align: center;
+    margin: 50px 0;
+}
+  
+.view-more-button {
+    padding: 6px 24px;
+    background-color: rgb(73, 163, 73);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+.view-more-button:hover{
+    background-color: rgb(51, 190, 51);
+}
+  

@@ -5,13 +5,11 @@ import { useContext } from "react";
 
 export const Home = () => {
   const { allCoin, currency } = useContext(CoinContext);
-  const [displayCoin, setDisplayCoin] = useState([]);
+  const [displayCount, setDisplayCount] = useState(10);
 
-  useEffect(() => {
-    if (allCoin) {
-      setDisplayCoin(allCoin);
-    }
-  }, [allCoin]);
+  const loadMoreCoins = () => {
+    setDisplayCount((prevCount) => prevCount + 5);
+  };
 
   return (
     <div className="home">
@@ -40,7 +38,7 @@ export const Home = () => {
           <p className="market-cap">Market Cap</p>
         </div>
 
-        {displayCoin?.slice(0, 10).map((item, index) => (
+        {allCoin?.slice(0, displayCount).map((item, index) => (
           <div className="table-layout" key={index}>
             <p>{item.market_cap_rank}</p>
             <div>
@@ -81,6 +79,14 @@ export const Home = () => {
             </p>
           </div>
         ))}
+
+        {displayCount < allCoin?.length && (
+          <div className="view-more-container">
+            <button className="view-more-button" onClick={loadMoreCoins}>
+              View More
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
