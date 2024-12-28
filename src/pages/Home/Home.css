@@ -54,7 +54,7 @@
     background-color: rgb(51, 190, 51);
 }
 
-/* Stying crypto table layout */
+/* Styling crypto table layout */
 .crypto-table{
     max-width: 800px;
     margin: auto;
@@ -64,12 +64,13 @@
 }
 .table-layout{
     display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr;
+    grid-template-columns: 0.5fr 1.8fr 1fr 1fr 1.5fr;
     padding: 15px 20px;
     align-items: center;
     border-bottom: 1px solid #534c4c;
     transition: all 0.2s;
     cursor: pointer;
+    font-weight: 600;
 }
 .table-layout:not(:first-child):hover {
     scale: 1.02;
@@ -121,3 +122,21 @@
     background-color: rgb(51, 190, 51);
 }
   
+/* Responsiveness for Mobile */
+@media screen and (max-width: 768px){
+    .table-layout{
+        /* grid-template-columns: 0.5fr 3fr 1fr 1fr; */
+        grid-template-columns: 0.6fr 2.5fr 1.3fr 1fr;
+    }
+    .market-cap{
+        display: none;
+    }
+}
+@media screen and (max-width: 500px){
+    .table-layout div img{
+        width: 25px;
+    }
+    .table-layout{
+        font-size: 0.76rem;
+    }
+}
