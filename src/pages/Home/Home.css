@@ -79,6 +79,7 @@
     transition: all 0.2s;
     cursor: pointer;
     font-weight: 600;
+    color: white;
 }
 .table-layout:not(:first-child):hover {
     scale: 1.02;
