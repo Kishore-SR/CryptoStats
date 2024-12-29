@@ -56,8 +56,8 @@ export const Home = () => {
         <div className="table-layout">
           <p>#</p>
           <p>Coins</p>
-          <p>Price</p>
-          <p style={{ textAlign: "center" }}>24H Change</p>
+          <p>Price</p>sty
+          <p le={{ textAlign: "center" }}>24H Change</p>
           <p className="market-cap">Market Cap</p>
         </div>
 

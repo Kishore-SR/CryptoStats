@@ -49,10 +49,37 @@ export const Coin = () => {
       <div className='coin'>
       <div className="coin-name">
         <img src={coinData.image.large} alt={coinData.name} />
-        <p><b>{coinData.name} ({coinData.symbol.toUpperCase()})</b></p>
+        <p>{coinData.name} ({coinData.symbol.toUpperCase()})</p>
       </div>
       <div className="coin-chart">
         <LineChart historicalData={historicalData}/>
+      </div>
+
+      <div className="coin-info">
+        <ul>
+          <li>Crypto Market Rank</li>
+          <li># {coinData.market_cap_rank}</li>
+        </ul>
+
+        <ul>
+          <li>Current Price</li>
+          <li>{currency.symbol} {coinData.market_data.market_cap[currency.name].toLocaleString()}</li>
+        </ul>
+
+        <ul>
+          <li>Market cap</li>
+          <li>{currency.symbol} {coinData.market_data.market_cap[currency.name].toLocaleString()}</li>
+        </ul>
+
+        <ul>
+          <li>24 Hour high</li>
+          <li style={{color:" #00D515", fontWeight:"600"}}>{currency.symbol} {coinData.market_data.high_24h[currency.name].toLocaleString()}</li>
+        </ul>
+
+        <ul>
+          <li>24 Hour low</li>
+          <li style={{color:"#ff4646", fontWeight:"600"}}>{currency.symbol} {coinData.market_data.low_24h[currency.name].toLocaleString()}</li>
+        </ul>
       </div>
     </div>
   )
