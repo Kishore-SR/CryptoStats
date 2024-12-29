@@ -2,7 +2,9 @@
 
 **CryptoStats** is a React project that fetches and displays real-time price data for cryptocurrencies like Bitcoin and other altcoins.
 
-[![Project Link](https://img.shields.io/badge/Website%20Link-37a779?style=for-the-badge)]()
+This project uses [CoinGecko API](https://www.coingecko.com/)
+
+[![Project Link](https://img.shields.io/badge/Project%20Link-37a779?style=for-the-badge)](https://crypto-stats.pages.dev/)
 
 ### Built Using
 [![React](https://img.shields.io/badge/react-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://reactjs.org/)
@@ -10,19 +12,19 @@
 ![Vite](https://img.shields.io/badge/Vite-643EED.svg?style=for-the-badge&logo=vite&logoColor=white)
 
 ### Project Preview
-###### `Home Page:` Displays the top 10 cryptocurrencies
+###### `Home Page:` Displays the top 10 cryptocurrencies.
 ![Image](https://github.com/user-attachments/assets/63ce50e9-c907-4761-96ea-7fc9d48a819d)
 
-###### `Search Functionality:` Search for specific crypto to track their prices.
+###### `Search Functionality:` Search for specific crypto to track it's prices.
 ![Image](https://github.com/user-attachments/assets/a49c119a-e5c0-44c3-bdf2-ecf09439aff7)
 
-###### `Live Chart:` A dynamic chart showing crypto price trends over time.
+###### `Live Chart:` A dynamic chart showing price trends over time.
 ![Image](https://github.com/user-attachments/assets/fa615e34-b8be-4e7b-bf1c-182aa85f4778)
 
 ###### `Real-Time Data:` Displays real-time price updates
-![Image](https://github.com/user-attachments/assets/ad42a948-86d1-4707-81fd-425ba5c8ece0)
+![Image](https://github.com/user-attachments/assets/bbba5ab6-f1c5-4c97-bb66-b9df90cf2824)
 
-###### `Error State:` Error message when data cannot be fetched or a cryptocurrency is not found.
+###### `Error State:`When data cannot be fetched or a crypto is not found.
 ![Image](https://github.com/user-attachments/assets/cd3fb303-e668-4f38-af15-dc9190299343)
 
 ### Connect Here
