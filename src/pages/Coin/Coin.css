@@ -36,8 +36,10 @@
   }
 .coin-name img:hover {
     transform: scale(1.2) rotateY(360deg);
-  }
+}
 .coin-name p{
+    font-family: monospace;
+    text-align: center;
     font-size: 38px;
     font-weight: 500;
 }
@@ -61,4 +63,14 @@
 }
 .coin-info ul :last-child{
     font-weight: 300;
+}
+
+/* Responsiveness for Mobile */
+@media screen and (max-width: 768px){
+    .coin-name p{
+        font-size: 26px;
+    }
+    .coin-chart{
+        height: 250px;
+    }
 }

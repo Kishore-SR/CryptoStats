@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import './LineChart.css'
 import Chart from 'react-google-charts'
 import { useState } from 'react'
 
