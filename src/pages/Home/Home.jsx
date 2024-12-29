@@ -34,12 +34,11 @@ export const Home = () => {
     <div className="home">
       <div className="hero">
         <h1>
-          Track Cryptocurrency <br />
-          Prices and More
+          Crypto Insights <br />
+          For Smarter Decisions
         </h1>
         <p>
-          Get real-time prices, 24-hour changes, market cap, and more for
-          Bitcoin, altcoins, and other cryptocurrencies.
+          Explore price updates, market caps, and performance stats of top cryptocurrencies in one place.
         </p>
 
         <form onSubmit={(e) => e.preventDefault()}>
